@@ -20,7 +20,7 @@ main:
     push rbp
     mov rbp, rsp
 
-    sub rsp, 12  ; Stack alignment
+    sub rsp, 16 ; Stack alignment
 
     ; Prompt for a
     mov rdi, prompt_a
@@ -59,9 +59,8 @@ print_result:
     xor eax, eax
     call printf
 
-    add rsp, 12  ; Restore stack alignment
+    add rsp, 16  ; Restore stack alignment
     mov rsp, rbp
     pop rbp
     xor eax, eax
     ret
-

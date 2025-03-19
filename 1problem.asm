@@ -22,7 +22,7 @@ section .text
 main:
     push rbp
     mov rbp, rsp
-    sub rsp, 25  ; Align stack 
+    sub rsp, 16 ; Align stack 
 
     ; Prompt for first number
     mov rdi, prompt1
@@ -106,8 +106,7 @@ print_result:
     call printf
 
 end_program:
-    add rsp, 25  ; Restore stack alignment
+    add rsp, 16  ; Restore stack alignment
     pop rbp
     mov rax, 0
     ret
-

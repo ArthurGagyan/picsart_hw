@@ -18,7 +18,7 @@ section .text
 main:
     push rbp
     mov rbp, rsp
-    sub rsp, 24  ; Align stack
+    sub rsp, 16  ; Align stack
 
     ; Prompt for input
     mov rdi, prompt
@@ -63,8 +63,7 @@ print_result:
     call printf
 
 end_program:
-    add rsp, 24  ; Restore stack
+    add rsp, 16  ; Restore stack
     pop rbp
     mov rax, 0
     ret
-
