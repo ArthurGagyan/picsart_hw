@@ -5,5 +5,5 @@ int main(){
 	scanf("%lf", &a);
 	printf("%lf", a);
 
-
+return 0;
 }
